@@ -15,34 +15,29 @@ A Python-based Linux enumeration script for post-exploitation auditing and CTF w
 ➞ Tooling inventory: Reports presence of nmap, nc/curl/wget, interpreters (python/perl/php/ruby), containers (docker/kubectl), and compilers (gcc/g++), including package checks.  
 ➞ Colorized output: Uses termcolor to present findings clearly; ASCII banner for visual identification.  
 
-When to use
+**When to use**
 
-    After initial foothold to rapidly assess privilege escalation vectors on Linux targets in CTFs, labs, and controlled assessments.
+➞ After initial foothold to rapidly assess privilege escalation vectors on Linux targets in CTFs, labs, and controlled assessments.  
+➞ To map kernel/sudo versions to known public exploits and validate feasibility based on local tooling availability.  
+➞ To spot quick wins like writable PATH directories, exposed env secrets, or credentialed fstab mounts.  
 
-To map kernel/sudo versions to known public exploits and validate feasibility based on local tooling availability.
+**Prerequisites**
 
-To spot quick wins like writable PATH directories, exposed env secrets, or credentialed fstab mounts.
-Prerequisites
+➞ Python 3 with termcolor and packaging installed; requests is imported but not used functionally in the current script.  
+➞ Optional but recommended: searchsploit installed and updated (Exploit-DB CLI).  
+➞ Appropriate permissions to read /proc/version, /etc/os-release, /etc/fstab, and run basic system commands.  
 
-    Python 3 with termcolor and packaging installed; requests is imported but not used functionally in the current script.
+**Installation**
 
-Optional but recommended: searchsploit installed and updated (Exploit-DB CLI).
+➞ Save the script file to the target system (e.g., enum.py).  
+➞ Install Python deps: pip3 install termcolor packaging requests.  
+➞ Install SearchSploit if using exploit lookups: follow the Exploit-DB instructions (package or Git install), and update the local DB.  
 
-Appropriate permissions to read /proc/version, /etc/os-release, /etc/fstab, and run basic system commands.
-Installation
+**Usage**
 
-    Save the script file to the target system (e.g., enum.py).
-
-Install Python deps: pip3 install termcolor packaging requests.
-
-Install SearchSploit if using exploit lookups: follow the Exploit-DB instructions (package or Git install), and update the local DB.
-Usage
-
-    Grant execute permission if desired: chmod +x enum.py; run with Python 3: python3 enum.py.
-
-No arguments are required; the script prints colorized sections as it enumerates.
-
-Network access is not required for core checks; SearchSploit uses the local exploit index.
+➞ Grant execute permission if desired: chmod +x enum.py; run with Python 3: python3 enum.py.  
+➞ No arguments are required; the script prints colorized sections as it enumerates.  
+➞ Network access is not required for core checks; SearchSploit uses the local exploit index.  
 
 
 Prilux is a tool for carrying out extensive enmeration for Linux privilege escalation.
