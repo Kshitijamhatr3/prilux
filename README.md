@@ -1,4 +1,4 @@
-# prilux 🐛
+# prilux 🦊
 
 **Summary**
 A Python-based Linux enumeration script for post-exploitation auditing and CTF workflows that collects OS/distro/kernel details, flags writable PATH entries, hunts for secrets in environment variables and fstab, queries SearchSploit for kernel/sudo version exploits, lists block devices, and reports useful tooling (interpreters, net utilities, container CLIs, compilers) to inform potential privilege escalation paths. This mirrors standard privesc recon playbooks used by practitioners and checklists like LinEnum/LinPEAS-style routines.
