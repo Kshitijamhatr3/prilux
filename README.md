@@ -5,8 +5,8 @@ A Python-based Linux enumeration script for post-exploitation auditing and CTF w
 
 **What it does**
 
-➞ OS and kernel discovery: Reads /proc/version, uname -a, lsb_release -a, and /etc/os-release to fingerprint the platform and kernel for exploit matching.
-➞ Kernel version parsing: Extracts a version in the form X.Y.Z to drive exploit searches.
+➞ OS and kernel discovery: Reads /proc/version, uname -a, lsb_release -a, and /etc/os-release to fingerprint the platform and kernel for exploit matching. /n
+➞ Kernel version parsing: Extracts a version in the form X.Y.Z to drive exploit searches. /n
 ➞ Sudo version check: Parses local sudo version via sudo --version for targeted exploit lookups.
 ➞ Writable PATH audit: Identifies writable directories in PATH that enable command hijacking escalation scenarios.
 ➞ Environment secret scan: Greps env for likely keys/passwords/secrets to surface accidental credential exposure.
