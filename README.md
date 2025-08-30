@@ -9,7 +9,7 @@ A Python-based Linux enumeration script for post-exploitation auditing and CTF w
 
 ➞ Kernel version parsing: Extracts a version in the form X.Y.Z to drive exploit searches.  
 
-➞ Sudo version check: Parses local sudo version via sudo --version for targeted exploit lookups.
+➞ Sudo version check: Parses local sudo version via sudo --version for targeted exploit lookups.  
 ➞ Writable PATH audit: Identifies writable directories in PATH that enable command hijacking escalation scenarios.
 ➞ Environment secret scan: Greps env for likely keys/passwords/secrets to surface accidental credential exposure.
 ➞ Exploit lookups with SearchSploit: Queries Exploit-DB via searchsploit for “Linux Kernel <version>” and “sudo <version>”.
